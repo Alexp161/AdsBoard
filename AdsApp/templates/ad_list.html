@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Ads</h1>
+  <ul>
+  {% for ad in ads %}
+    <li>
+      <h2>{{ ad.title }}</h2>
+      <p>{{ ad.description }}</p>
+    </li>
+  {% empty %}
+    <li>No ads yet.</li>
+  {% endfor %}
+  </ul>
+{% endblock %}
